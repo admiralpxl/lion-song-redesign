@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixin";
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +14,9 @@ body {
 }
 .header {
     width: 100%;
-    height: auto;
-    position: absolute;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
 }
 .header-nav {
     width: 100%;
@@ -24,7 +26,6 @@ body {
     display: grid;
     grid-template-rows: .5fr .8fr 1fr;
     transform: translateX(-100%);
-    z-index: -1;
 }
 .header-list {
     display: flex;
@@ -101,7 +102,7 @@ body {
     height: 35px;
     margin-right: 1.2rem;
     cursor: pointer;
-    z-index: 1;
+    z-index: 3;
 }
 .header-nav-hamburger-menu-button {
     width: 100%;
@@ -151,9 +152,165 @@ body {
 .main {
     width: 100%;
     height: auto;
+    color: $fontcolor;
 }
 .main-container-parallax {
     width: 100%;
     height: 100vh;
-    background-color: $black;
+    position: relative;
+}
+.parallax {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.main-container-parallax-logo {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/tls_logo.png');
+    width: 305px;
+    height: 305px;
+    z-index: -6;
+}
+.main-container-parallax-one {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax0.png');
+    z-index: -7;
+}
+.main-container-parallax-two {
+    height: 70%;
+    bottom: 0;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax1.png');
+    z-index: -5;
+}
+.main-container-parallax-three {
+    height: 60%;
+    bottom: 0;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax2.png');
+    z-index: -4;
+}
+.main-container-parallax-four {
+    height: 60%;
+    bottom: 0;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax3.png');
+    z-index: -3;
+}
+.main-container-parallax-five {
+    height: 50%;
+    bottom: 0;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax4.png');
+    z-index: -2;
+}
+.main-container-parallax-six {
+    height: 50%;
+    bottom: 0;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax5.png');
+    z-index: -1;
+}
+.main-container-parallax-seven {
+    height: 80%;
+    bottom: 0;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax6.png');
+    z-index: 0;
+}
+.main-container-info {
+    background-color: $base;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.main-container-info-logo {
+    width: 305px;
+    height: 305px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/tls_logo.png');
+    margin: 15px;
+}
+.main-container-info h1 {
+    font-size: $sidemenu;
+    font-family: $fonttitles;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    margin: 15px;
+}
+.main-container-info p {
+    width: 80%;
+    max-width: 600px;
+    font-size: $conten;
+    font-family: $fontcontent;
+    line-height: $content;
+    margin: 15px;
+}
+.main-container-awards {
+    width: 100%;
+    height: auto;
+    background-color: $base;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+.main-container-awards-video {
+    width: 100%;
+    min-height: 320px;
+    margin: 15px 0;
+}
+.main-container-awards-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.main-container-awards-info span {
+    width: 250px;
+    height: 170px;
+    margin: 15px 0;
+}
+.main-container-awards-info-prizes-one {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/award_igf_mentions_narrative.png');
+}
+.main-container-awards-info-prizes-two {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/award_reversed_beststory_website.png');
+}
+.main-container-awards-info-prizes-three {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/award_taptap_all.png');
+}
+.main-container-awards-info-prizes-four {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/award_futurezone.png');
+}
+.main-container-awards-info-prizes-five {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/award_developer_germany.png');
+}
+.main-container-awards-info-prizes-six {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/award_developer_nominee_story_EN.png');
+}
+.main-container-episodes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $base;
+    padding-top: 15px;
+}
+.main-container-episodes h1 {
+    font-size: $sidemenu;
+    font-family: $fonttitles;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    margin: 15px;
+    align-self: center;
+    padding-bottom: 20px;
+}
+.main-container-episodes-gifs {
+    display: grid;
+    row-gap: 20px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.main-container-episodes-gifs img{
+    width: 100%;
+    min-height: auto;
 }

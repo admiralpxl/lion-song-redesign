@@ -1,0 +1,7 @@
+@mixin iconos($icon: url) {
+    display: inline-block;
+    background-image: url($icon);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
