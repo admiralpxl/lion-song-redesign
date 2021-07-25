@@ -1,0 +1,740 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Averia Serif Libre", cursive;
+}
+
+body {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 2;
+}
+
+.header-nav {
+  width: 100%;
+  height: 100vh;
+  background-color: #754545;
+  color: #BDA17D;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.5fr 0.8fr 1fr;
+  grid-template-rows: 0.5fr 0.8fr 1fr;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.header-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  width: 100%;
+  height: 400px;
+  font-size: 3.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.header-list li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.header-list li a {
+  text-decoration: none;
+  color: #BDA17D;
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+.header-list li a:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+.header-links {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-links a {
+  background-color: #BDA17D;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.show {
+  -webkit-animation-name: cerrar;
+          animation-name: cerrar;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.unshow {
+  -webkit-animation-name: abrir;
+          animation-name: abrir;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes abrir {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes abrir {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cerrar {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes cerrar {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+.header-nav-hamburger-menu {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  width: 35px;
+  height: 35px;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.header-nav-hamburger-menu-button {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.button {
+  position: relative;
+}
+
+.button-div {
+  width: 3.2rem;
+  height: 0.5rem;
+  background: #BDA17D;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.button-div:after, .button-div:before {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 0.5rem;
+  background: #BDA17D;
+  left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.button-div:after {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.button-div:before {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.button-div-open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  background: transparent;
+}
+
+.button-div-open:after {
+  -webkit-transform: translate(calc(0%), -0.045rem) rotate(-45deg);
+          transform: translate(calc(0%), -0.045rem) rotate(-45deg);
+}
+
+.button-div-open:before {
+  -webkit-transform: translate(calc(0%), -0.045rem) rotate(45deg);
+          transform: translate(calc(0%), -0.045rem) rotate(45deg);
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  color: #BDA17D;
+}
+
+.main-container-parallax {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.parallax {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.main-container-parallax-logo {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/tls_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 305px;
+  height: 305px;
+  z-index: -6;
+}
+
+.main-container-parallax-one {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax0.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -7;
+}
+
+.main-container-parallax-two {
+  height: 70%;
+  bottom: 0;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -5;
+}
+
+.main-container-parallax-three {
+  height: 60%;
+  bottom: 0;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -4;
+}
+
+.main-container-parallax-four {
+  height: 60%;
+  bottom: 0;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -3;
+}
+
+.main-container-parallax-five {
+  height: 50%;
+  bottom: 0;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.main-container-parallax-six {
+  height: 50%;
+  bottom: 0;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.main-container-parallax-seven {
+  height: 80%;
+  bottom: 0;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/parallax/e03_parallax6.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.main-container-info {
+  background-color: #3B2A3C;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.main-container-info-logo {
+  width: 305px;
+  height: 305px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/tls_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 15px;
+}
+
+.main-container-info h1 {
+  font-size: 3.8rem;
+  font-family: "Averia Serif Libre", cursive;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  margin: 15px;
+}
+
+.main-container-info p {
+  width: 80%;
+  max-width: 600px;
+  font-size: 2.2rem;
+  font-family: "Raleway", sans-serif;
+  line-height: 2.8rem;
+  margin: 15px;
+}
+
+.main-container-awards {
+  width: 100%;
+  height: auto;
+  background-color: #3B2A3C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.main-container-awards-video {
+  width: 100%;
+  min-height: 320px;
+  margin: 15px 0;
+}
+
+.main-container-awards-info {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-container-awards-info span {
+  width: 250px;
+  height: 170px;
+  margin: 15px 0;
+}
+
+.main-container-awards-info-prizes-one {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/award_igf_mentions_narrative.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container-awards-info-prizes-two {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/award_reversed_beststory_website.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container-awards-info-prizes-three {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/award_taptap_all.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container-awards-info-prizes-four {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/award_futurezone.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container-awards-info-prizes-five {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/award_developer_germany.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container-awards-info-prizes-six {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/award_developer_nominee_story_EN.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container-episodes {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #3B2A3C;
+  padding-top: 15px;
+}
+
+.main-container-episodes h1 {
+  font-size: 3.8rem;
+  font-family: "Averia Serif Libre", cursive;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  margin: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 20px;
+}
+
+.main-container-episodes-gifs {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-episodes-gifs img {
+  width: 100%;
+  min-height: auto;
+}
+
+.main-container-links {
+  width: 100%;
+  height: auto;
+  background-color: #3B2A3C;
+  padding-top: 50px;
+}
+
+.main-container-links-season {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-links h2, .main-container-links-nintendo h2 {
+  font-size: 2.4rem;
+  font-family: "Averia Serif Libre", cursive;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  margin: 15px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-container-links-season a {
+  margin: 15px 0;
+}
+
+.main-container-links-season__steam {
+  width: 190px;
+  height: 70px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/steam.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-container-links-season__humble {
+  width: 300px;
+  height: 70px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/humblebundle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+}
+
+.main-container-links-season__gog {
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/gogcom-horizontal-white.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-container-links-season__utomik {
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/utomik-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-container-links-season__epic {
+  width: 150px;
+  height: 100px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/epicgames-white_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-container-links-rare {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container-links-rare a {
+  width: 260px;
+  height: 200px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/superraregames_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+}
+
+.main-container-links-full-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container-links-full-game__mac {
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/macstore.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.main-container-links-full-game__windows {
+  width: 250px;
+  height: 90px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/English_get%20it%20from%20MS_864X312.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px 0;
+}
+
+.main-container-links-full-game__ios {
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/appstore.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-size: unset;
+}
+
+.main-container-links-full-game__android {
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/googleplay.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: unset;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.main-container-links-nintendo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container-links-nintendo a {
+  width: 300px;
+  height: 50px;
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/badges/Nintendo_eShop_Icon_Logo_White.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.main-container-links-nintendo img {
+  width: 100%;
+  max-width: 620px;
+  min-height: auto;
+  margin: 18px 0;
+}

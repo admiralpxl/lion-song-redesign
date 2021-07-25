@@ -314,3 +314,131 @@ body {
     width: 100%;
     min-height: auto;
 }
+.main-container-links {
+    width: 100%;
+    height: auto;
+    background-color: $base;
+    padding-top: 50px;
+}
+.main-container-links-season {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.main-container-links h2, .main-container-links-nintendo h2 {
+    font-size: $subtitle;
+    font-family: $fonttitles;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    margin: 15px;
+    justify-self: center;
+}
+.main-container-links-season a {
+    margin: 15px 0;
+}
+.main-container-links-season__steam {
+    width: 190px;
+    height: 70px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/steam.png');
+    background-size: unset;
+    justify-self: center;
+}
+.main-container-links-season__humble {
+    width: 300px;
+    height: 70px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/humblebundle.png');
+    background-size: unset;
+}
+.main-container-links-season__gog {
+    width: 250px;
+    height: 60px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/gogcom-horizontal-white.png');
+    background-size: unset;
+    justify-self: center;
+}
+.main-container-links-season__utomik {
+    width: 250px;
+    height: 60px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/utomik-logo.png');
+    background-size: unset;
+    justify-self: center;
+}
+.main-container-links-season__epic {
+    width: 150px;
+    height: 100px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/epicgames-white_logo.png');
+    background-size: unset;
+    justify-self: center;
+}
+.main-container-links-rare {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container-links-rare a {
+    width: 260px;
+    height: 200px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/superraregames_logo.png');
+    background-size: unset;
+}
+.main-container-links-full-game {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container-links-full-game__mac{
+    width: 250px;
+    height: 60px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/macstore.png');
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.main-container-links-full-game__windows{
+    width: 250px;
+    height: 90px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/English_get%20it%20from%20MS_864X312.png');
+    margin: 10px 0;
+}
+.main-container-links-full-game__ios{
+    width: 250px;
+    height: 60px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/appstore.png');
+    margin: 10px 0;
+    border-radius: 5px;
+    background-size: unset;
+}
+.main-container-links-full-game__android{
+    width: 250px;
+    height: 60px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/googleplay.png');
+    background-size: unset;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.main-container-links-nintendo {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container-links-nintendo a {
+    width: 300px;
+    height: 50px;
+    @include iconos($icon: 'https://www.lionssonggame.com/img/badges/Nintendo_eShop_Icon_Logo_White.png');
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.main-container-links-nintendo img {
+    width: 100%;
+    max-width: 620px;
+    min-height: auto;
+    margin: 18px 0;
+}
