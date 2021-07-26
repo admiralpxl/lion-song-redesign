@@ -319,6 +319,7 @@ body {
     height: auto;
     background-color: $base;
     padding-top: 50px;
+    padding-bottom: 15px;
 }
 .main-container-links-season {
     width: 100%;
@@ -327,7 +328,7 @@ body {
     grid-gap: 10px;
     justify-content: center;
 }
-.main-container-links h2, .main-container-links-nintendo h2 {
+.main-container-links-season h2, .main-container-links-nintendo h2, .main-container-links-full-game h2, .main-container-links-rare h2 {
     font-size: $subtitle;
     font-family: $fonttitles;
     width: 80%;
@@ -442,3 +443,83 @@ body {
     min-height: auto;
     margin: 18px 0;
 }
+.main-container-media {
+    width: 100%;
+    height: auto;
+    background-color: $base;
+}
+.main-container-media h2 {
+    font-size: $sidemenu;
+    font-family: $fonttitles;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.main-container-screenshots h2 {
+    font-size: $subtitle;
+    font-family: $fonttitles;
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+}
+.main-container-screenshots-container {
+    width: 100%;
+    height: 890px;
+    position: relative;
+    overflow-x: hidden;
+    background-color:#3b2a3c;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.main-container-screenshots-container img {
+    max-width: 350px;
+    transition: all 1s ease-in;
+    transition-delay: 50ms;
+}
+.main-container-screenshots-container img:hover {
+    transform: translateY(20px) translate(0);
+    z-index: 1;
+}
+.one {
+    width: 100%;
+    heigh: auto;
+    position: absolute;
+    transform: translate(10px);
+}
+.two {
+    width: 100%;
+    heigh: auto;
+    top: 15%;
+    position: absolute;
+    transform: translate(20px);
+}
+.three {
+    width: 100%;
+    heigh: auto;
+    top: 30%;
+    position: absolute;
+    transform: translate(-10px);
+}
+.four {
+    width: 100%;
+    heigh: auto;
+    top: 45%;
+    position: absolute;
+    transform: translate(10px);
+}
+.five {
+    width: 100%;
+    heigh: auto;
+    top: 60%;
+    position: absolute;
+    transform: translate(20px);
+}
+.six {
+    width: 100%;
+    heigh: auto;
+    top: 75%;
+    position: absolute;
+    transform: translate(-10px);
+}
+
