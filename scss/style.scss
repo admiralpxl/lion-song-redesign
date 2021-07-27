@@ -319,7 +319,7 @@ body {
     height: auto;
     background-color: $base;
     padding-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
 }
 .main-container-links-season {
     width: 100%;
@@ -455,7 +455,7 @@ body {
     text-align: center;
     padding-bottom: 20px;
 }
-.main-container-screenshots h2 {
+.main-container-screenshots h2, .main-container-wallpaper h2 {
     font-size: $subtitle;
     font-family: $fonttitles;
     width: 100%;
@@ -483,43 +483,143 @@ body {
 }
 .one {
     width: 100%;
-    heigh: auto;
+    height: auto;
     position: absolute;
     transform: translate(10px);
 }
 .two {
     width: 100%;
-    heigh: auto;
+    height: auto;
     top: 15%;
     position: absolute;
     transform: translate(20px);
 }
 .three {
     width: 100%;
-    heigh: auto;
+    height: auto;
     top: 30%;
     position: absolute;
     transform: translate(-10px);
 }
 .four {
     width: 100%;
-    heigh: auto;
+    height: auto;
     top: 45%;
     position: absolute;
     transform: translate(10px);
 }
 .five {
     width: 100%;
-    heigh: auto;
+    height: auto;
     top: 60%;
     position: absolute;
     transform: translate(20px);
 }
 .six {
     width: 100%;
-    heigh: auto;
+    height: auto;
     top: 75%;
     position: absolute;
     transform: translate(-10px);
 }
-
+.one-wallpaper {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transform: translate(10px);
+}
+.two-wallpaper {
+    width: 100%;
+    height: auto;
+    top: 100px;
+    position: absolute;
+    transform: translateX(15px);
+}
+.three-wallpaper {
+    width: 100%;
+    height: auto;
+    top: 200px;
+    position: absolute;
+    transform: translate(-10px);
+}
+.four-wallpaper {
+    width: 100%;
+    height: auto;
+    top: 300px;
+    position: absolute;
+    transform: translate(10px);
+}
+.five-wallpaper {
+    width: 100%;
+    height: auto;
+    top: 400px;
+    position: absolute;
+    transform: translate(20px);
+}
+.six-wallpaper {
+    width: 100%;
+    height: auto;
+    top: 500px;
+    position: absolute;
+    transform: translate(-10px);
+}
+.seven-wallpaper {
+    width: 100%;
+    height: auto;
+    top: 600px;
+    position: absolute;
+    transform: translate(-10px);
+}
+.main-container-wallpaper-container {
+    width: 100%;
+    height: 800px;
+    background-color: #3b2a3c;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.main-container-wallpaper-container img {
+    position: absolute;
+    width: 100%;
+    max-width: 580px;
+    height: 158px;
+    border-radius: 10px;
+    opacity: 0.90;
+    transform: translate(0);
+    transition: all .6s ease-in;
+}
+.main-container-wallpaper-container img:hover  {
+    opacity: 1;
+    transform: translateY(5px);
+    z-index: 1;
+}
+.main-container-presskit {
+    width: 100%;
+    height: auto;
+    background-color: $base;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container-presskit h2 {
+    font-size: $sidemenu;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.main-container-presskit p {
+    font-size: $conten;
+    font-family: $fontcontent;
+    width: 80%;
+    max-width: 500px;
+    line-height: $content;
+    margin: 15px 0;
+}
+.main-container-presskit p a {
+    color: #f3e3d6;
+}
+.main-containner-presskit p a:hover {
+    color: $white;
+}
