@@ -613,7 +613,7 @@ body {
     font-size: $conten;
     font-family: $fontcontent;
     width: 80%;
-    max-width: 500px;
+    max-width: 550px;
     line-height: $content;
     margin: 15px 0;
 }
@@ -621,5 +621,71 @@ body {
     color: #f3e3d6;
 }
 .main-containner-presskit p a:hover {
+    color: $white;
+}
+.main-container-newsletter {
+    width: 100%;
+    height: auto;
+    background-color: $base;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container-newsletter-form {
+    width: 100%;
+    max-width: 900px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-container-newsletter h2 {
+    width: 100%;
+    font-size: $subtitle;
+    text-align: center;
+    align-self: center;
+}
+.main-container-newsletter-form .label-name {
+    width: 100%;
+    margin: 10 auto;
+    display: flex;
+    justify-content: center;
+}
+.main-container-newsletter-form .label-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-container-newsletter-form  .name{
+    width: 90%;
+    max-width: 450px;
+    height: 50px;
+    border: .5px solid $white;
+    background-color: $thirdcolor;
+    border-radius: 10px;
+    font-size: $subtitle;
+    color: $fontcolor;
+    padding: 10px;
+    outline: none;
+    font-family: $fonttitles;
+}
+.main-container-newsletter-form .submit {
+    height: 50px;
+    width: 200px;
+    outline: none;
+    border: .5px solid $white;
+    border-radius: 10px;
+    font-size: $subtitle;
+    font-weight: bold;
+    font-family: $fonttitles;
+    letter-spacing: .2rem;
+    color: $fontcolor;
+    background-color: $thirdcolor;
+    margin: 15px;
+    padding: 10px;
+    transition: all 400ms ease;
+}
+.main-container-newsletter-form .submit:hover {
+    background-color: $fontcolor;
     color: $white;
 }

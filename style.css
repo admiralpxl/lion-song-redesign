@@ -969,7 +969,7 @@ body {
   font-size: 2.2rem;
   font-family: "Raleway", sans-serif;
   width: 80%;
-  max-width: 500px;
+  max-width: 550px;
   line-height: 2.8rem;
   margin: 15px 0;
 }
@@ -979,5 +979,104 @@ body {
 }
 
 .main-containner-presskit p a:hover {
+  color: white;
+}
+
+.main-container-newsletter {
+  width: 100%;
+  height: auto;
+  background-color: #3B2A3C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container-newsletter-form {
+  width: 100%;
+  max-width: 900px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-newsletter h2 {
+  width: 100%;
+  font-size: 2.4rem;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main-container-newsletter-form .label-name {
+  width: 100%;
+  margin: 10 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-newsletter-form .label-submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-newsletter-form .name {
+  width: 90%;
+  max-width: 450px;
+  height: 50px;
+  border: 0.5px solid white;
+  background-color: #754545;
+  border-radius: 10px;
+  font-size: 2.4rem;
+  color: #BDA17D;
+  padding: 10px;
+  outline: none;
+  font-family: "Averia Serif Libre", cursive;
+}
+
+.main-container-newsletter-form .submit {
+  height: 50px;
+  width: 200px;
+  outline: none;
+  border: 0.5px solid white;
+  border-radius: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: "Averia Serif Libre", cursive;
+  letter-spacing: 0.2rem;
+  color: #BDA17D;
+  background-color: #754545;
+  margin: 15px;
+  padding: 10px;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.main-container-newsletter-form .submit:hover {
+  background-color: #BDA17D;
   color: white;
 }
