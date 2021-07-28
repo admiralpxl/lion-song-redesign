@@ -14,6 +14,22 @@ body {
   position: relative;
 }
 
+.animation {
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+}
+
+.animation.active {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 800ms ease-out;
+  transition: 800ms ease-out;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
 .header {
   width: 100%;
   height: 80px;
@@ -243,6 +259,8 @@ body {
   width: 100%;
   height: auto;
   color: #BDA17D;
+  padding-bottom: 30px;
+  background-color: #3B2A3C;
 }
 
 .main-container-parallax {
@@ -265,7 +283,7 @@ body {
   background-repeat: no-repeat;
   width: 305px;
   height: 305px;
-  z-index: -6;
+  z-index: 1;
 }
 
 .main-container-parallax-one {
@@ -274,7 +292,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -7;
 }
 
 .main-container-parallax-two {
@@ -285,7 +302,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -5;
 }
 
 .main-container-parallax-three {
@@ -296,7 +312,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -4;
 }
 
 .main-container-parallax-four {
@@ -307,7 +322,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -3;
 }
 
 .main-container-parallax-five {
@@ -318,7 +332,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -2;
 }
 
 .main-container-parallax-six {
@@ -329,7 +342,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
 }
 
 .main-container-parallax-seven {
@@ -340,7 +352,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0;
 }
 
 .main-container-info {
@@ -1062,7 +1073,7 @@ body {
   height: 50px;
   width: 200px;
   outline: none;
-  border: 0.5px solid white;
+  border: none;
   border-radius: 10px;
   font-size: 2.4rem;
   font-weight: bold;
@@ -1079,4 +1090,103 @@ body {
 .main-container-newsletter-form .submit:hover {
   background-color: #BDA17D;
   color: white;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #754545;
+}
+
+.footer-imprint, .footer-costumer-service {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.footer-imprint img {
+  width: 150px;
+  height: 128px;
+  margin-bottom: 24px;
+}
+
+.footer-imprint p {
+  width: 90%;
+  max-width: 300px;
+  font-size: 1.8rem;
+  color: #BDA17D;
+  font-family: "Raleway", sans-serif;
+  line-height: 2.8rem;
+  margin-bottom: 18px;
+}
+
+.footer-costumer-service h2 {
+  width: 90%;
+  text-align: center;
+  font-size: 3.6rem;
+  color: #BDA17D;
+  margin-bottom: 12px;
+}
+
+.footer-costumer-service ul {
+  list-style: none;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+.footer-costumer-service ul li {
+  margin: 15px 0;
+  font-size: 1.8rem;
+  font-family: 2.2rem;
+}
+
+.footer-costumer-service ul li a {
+  text-decoration: none;
+  color: #BDA17D;
+}
+
+.footer-costumer-service ul li a:hover {
+  color: #f3e3d6;
+  text-decoration: underline;
+}
+
+.footer-end {
+  width: 94%;
+  height: auto;
+  border-top: 0.5px solid #f3e3d6;
+  margin-top: 12px;
+}
+
+.footer-end p {
+  width: 90%;
+  color: #f3e3d6;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 12px auto;
 }

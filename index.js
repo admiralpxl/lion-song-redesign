@@ -23,6 +23,25 @@ function menuOpenButton() {
         nav.classList.remove('show');
     }
 }
+//Animation on Scroll - code below.
+let itemAppear = [...document.querySelectorAll('.animation')];
+let options = {
+    rootMargin: '-10%',
+    threshold: 0.0
+};
+let observer = new IntersectionObserver(showItem, options);
+
+function showItem (entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('active');
+        }
+    })
+}
+
+itemAppear.forEach(item => {
+    observer.observe(item);
+});
 
 
 

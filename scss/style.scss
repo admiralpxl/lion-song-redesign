@@ -12,6 +12,16 @@ html {
 body {
     position: relative;
 }
+.animation {
+    opacity: 0;
+    transform: translateY(30%);
+}
+.animation.active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 800ms ease-out;
+    transition-delay: 400ms;
+}
 .header {
     width: 100%;
     height: 80px;
@@ -153,6 +163,8 @@ body {
     width: 100%;
     height: auto;
     color: $fontcolor;
+    padding-bottom: 30px;
+    background-color: $base;
 }
 .main-container-parallax {
     width: 100%;
@@ -168,47 +180,45 @@ body {
     @include iconos($icon: 'https://www.lionssonggame.com/img/tls_logo.png');
     width: 305px;
     height: 305px;
-    z-index: -6;
+    z-index: 1;
+
 }
 .main-container-parallax-one {
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax0.png');
-    z-index: -7;
+
 }
 .main-container-parallax-two {
     height: 70%;
     bottom: 0;
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax1.png');
-    z-index: -5;
 }
 .main-container-parallax-three {
     height: 60%;
     bottom: 0;
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax2.png');
-    z-index: -4;
 }
 .main-container-parallax-four {
     height: 60%;
     bottom: 0;
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax3.png');
-    z-index: -3;
+
 }
 .main-container-parallax-five {
     height: 50%;
     bottom: 0;
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax4.png');
-    z-index: -2;
+
 }
 .main-container-parallax-six {
     height: 50%;
     bottom: 0;
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax5.png');
-    z-index: -1;
+
 }
 .main-container-parallax-seven {
     height: 80%;
     bottom: 0;
     @include iconos($icon: 'https://www.lionssonggame.com/img/parallax/e03_parallax6.png');
-    z-index: 0;
 }
 .main-container-info {
     background-color: $base;
@@ -673,7 +683,7 @@ body {
     height: 50px;
     width: 200px;
     outline: none;
-    border: .5px solid $white;
+    border: none;
     border-radius: 10px;
     font-size: $subtitle;
     font-weight: bold;
@@ -688,4 +698,75 @@ body {
 .main-container-newsletter-form .submit:hover {
     background-color: $fontcolor;
     color: $white;
+}
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $thirdcolor;
+}
+.footer-imprint, .footer-costumer-service {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer-imprint img {
+    width: 150px;
+    height: 128px;
+    margin-bottom: 24px;
+}
+.footer-imprint p {
+    width: 90%;
+    max-width: 300px;
+    font-size: $footer;
+    color: $fontcolor;
+    font-family: $fontcontent;
+    line-height: $content;
+    margin-bottom: 18px;
+}
+.footer-costumer-service h2 {
+    width: 90%;
+    text-align: center;
+    font-size: $footertitle;
+    color: $fontcolor;
+    margin-bottom: 12px;
+}
+.footer-costumer-service ul {
+    list-style: none;
+    width: 90%;
+    justify-content: center;
+    display: grid;
+}
+.footer-costumer-service ul li {
+    margin: 15px 0;
+    font-size: $footer;
+    font-family: $conten;
+}
+.footer-costumer-service ul li a {
+    text-decoration: none;
+    color: $fontcolor;
+}
+.footer-costumer-service ul li a:hover {
+    color: $another;
+    text-decoration: underline;
+}
+.footer-end {
+    width: 94%;
+    height: auto;
+    border-top: .5px solid $another;
+    margin-top: 12px;
+}
+.footer-end p {
+    width: 90%;
+    color: $another;
+    font-family: $fontcontent;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 12px auto;
 }
