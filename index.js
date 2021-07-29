@@ -7,7 +7,7 @@ const navDesktop = document.querySelector('nav.header-nav-desktop');
 const menuItems = [...document.querySelectorAll('.link')];
 const mediaQuery = window.matchMedia('(min-width: 1040px)');
 
-window.addEventListener('resize', () => mediaQuery.matches ? navDesktop.style.display = 'grid' : navDesktop.style.display = 'none');
+window.addEventListener('load', () => mediaQuery.matches ? navDesktop.style.display = 'grid' : navDesktop.style.display = 'none');
 
 
 menuItems.forEach((el) => {
