@@ -1,3 +1,172 @@
+@media (min-width: 900px) {
+  .footer-costumer-service, .footer-imprint {
+    width: 40%;
+  }
+
+  .footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 1040px) {
+  .header-nav-hamburger-menu {
+    display: none;
+  }
+
+  .header-nav-desktop {
+    display: -ms-grid;
+    display: grid;
+  }
+
+  .main-container-info {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 700px;
+  }
+
+  .main-container-info > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .main-container-info > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .main-container-info > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .main-container-info > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .main-container-info h1 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+
+  .main-container-info p {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+
+  .main-container-info .second {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    padding-top: 140px;
+    height: 100px;
+  }
+
+  .main-container-episodes-gifs {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .main-container-episodes-gifs > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .main-container-episodes-gifs > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .main-container-episodes-gifs > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .main-container-episodes-gifs > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .main-container-links {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 1200px;
+  }
+
+  .main-container-links > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .main-container-links > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .main-container-links > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .main-container-links > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .main-container-links > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .main-container-links > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+
+  .main-container-links-season {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+
+  .main-container-links-rare {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+
+  .main-container-links-nintendo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+
+  .main-container-media {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +217,45 @@ body {
   grid-template-rows: 0.5fr 0.8fr 1fr;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+.header-nav-desktop {
+  width: 100%;
+  height: 80px;
+  display: none;
+  position: fixed;
+  top: 0%;
+}
+
+.header-nav-list-desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 660px;
+  height: 40px;
+  font-size: 2.4rem;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header-nav-list-desktop li {
+  margin: 0 16px;
+  height: auto;
+  text-align: center;
+}
+
+.header-nav-list-desktop li a {
+  text-decoration: none;
+  color: #BDA17D;
+}
+
+.header-nav-list-desktop li a:hover {
+  text-decoration: underline;
+  color: #f3e3d6;
 }
 
 .header-list {
@@ -381,17 +589,16 @@ body {
 .main-container-info {
   background-color: #3B2A3C;
   width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  min-height: auto;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -404,7 +611,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 15px;
+  margin: 15px auto;
 }
 
 .main-container-info h1 {
@@ -413,7 +620,7 @@ body {
   width: 80%;
   max-width: 500px;
   text-align: center;
-  margin: 15px;
+  margin: 15px auto;
 }
 
 .main-container-info p {
@@ -422,7 +629,7 @@ body {
   font-size: 2.2rem;
   font-family: "Raleway", sans-serif;
   line-height: 2.8rem;
-  margin: 15px;
+  margin: 15px auto;
 }
 
 .main-container-awards {
@@ -437,16 +644,22 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container-awards-video {
   width: 100%;
-  min-height: 320px;
-  margin: 15px 0;
+  max-width: 600px;
+  min-height: 340px;
+  margin: 15px auto;
+  padding-bottom: 20px;
 }
 
 .main-container-awards-info {
   width: 100%;
+  max-width: 800px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -541,7 +754,7 @@ body {
 .main-container-episodes-gifs {
   display: -ms-grid;
   display: grid;
-  row-gap: 20px;
+  grid-gap: 16px;
   width: 100%;
   height: auto;
   -webkit-box-pack: center;
@@ -551,19 +764,25 @@ body {
 
 .main-container-episodes-gifs img {
   width: 100%;
+  max-width: 580px;
+  max-height: 580px;
   min-height: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .main-container-links {
   width: 100%;
-  height: auto;
+  min-height: auto;
   background-color: #3B2A3C;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: -ms-grid;
+  display: grid;
 }
 
 .main-container-links-season {
-  width: 100%;
+  min-width: 100%;
   height: auto;
   display: -ms-grid;
   display: grid;
@@ -571,6 +790,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .main-container-links-season h2, .main-container-links-nintendo h2, .main-container-links-full-game h2, .main-container-links-rare h2 {
@@ -778,6 +999,8 @@ body {
 .main-container-media {
   width: 100%;
   height: auto;
+  display: -ms-grid;
+  display: grid;
   background-color: #3B2A3C;
 }
 
@@ -785,6 +1008,9 @@ body {
   font-size: 3.8rem;
   font-family: "Averia Serif Libre", cursive;
   width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -1122,19 +1348,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #754545;
 }
 
 .footer-imprint, .footer-costumer-service {
   width: 100%;
-  max-width: 350px;
+  max-width: 450px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1147,6 +1370,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .footer-imprint img {
@@ -1213,4 +1438,8 @@ body {
   font-size: 1.3rem;
   text-align: center;
   margin: 12px auto;
+}
+
+.footer-end p a {
+  color: #BDA17D;
 }

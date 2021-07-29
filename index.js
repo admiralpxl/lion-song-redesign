@@ -3,8 +3,11 @@ const menu = document.getElementById('menu');
 const button = document.getElementById('button');
 const c = document.getElementById('c');
 const nav = document.getElementById('nav');
+const navDesktop = document.querySelector('nav.header-nav-desktop');
 const menuItems = [...document.querySelectorAll('.link')];
+const mediaQuery = window.matchMedia('(min-width: 1040px)');
 
+window.addEventListener('resize', () => mediaQuery.matches ? navDesktop.style.display = 'grid' : navDesktop.style.display = 'none');
 
 
 menuItems.forEach((el) => {
@@ -35,6 +38,8 @@ function menuOpenButton() {
         nav.classList.remove('show');
     }
 }
+
+
 //Animation on Scroll - code below.
 let itemAppear = [...document.querySelectorAll('.animation')];
 let options = {
