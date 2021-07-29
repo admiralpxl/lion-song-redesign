@@ -68,9 +68,18 @@ body {
 }
 .header-links a {
     background-color:$fontcolor;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+}
+.header-links .twitter{
+    @include iconos($icon: 'https://www.lionssonggame.com/img/socialmedia_icons/icon_twitter.png');
+}
+.header-links .facebook {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/socialmedia_icons/icon_facebook.png');
+}
+.header-links .tumblr {
+    @include iconos($icon: 'https://www.lionssonggame.com/img/socialmedia_icons/icon_tumblr.png');
 }
 .show {
     animation-name: cerrar;

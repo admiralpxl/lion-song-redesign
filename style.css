@@ -101,9 +101,33 @@ body {
 
 .header-links a {
   background-color: #BDA17D;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+}
+
+.header-links .twitter {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/socialmedia_icons/icon_twitter.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-links .facebook {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/socialmedia_icons/icon_facebook.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-links .tumblr {
+  display: inline-block;
+  background-image: url("https://www.lionssonggame.com/img/socialmedia_icons/icon_tumblr.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .show {

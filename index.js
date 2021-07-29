@@ -3,14 +3,26 @@ const menu = document.getElementById('menu');
 const button = document.getElementById('button');
 const c = document.getElementById('c');
 const nav = document.getElementById('nav');
+const menuItems = [...document.querySelectorAll('.link')];
 
 
 
-const cerrar = () => {
-    //open.classList.remove('show');
-   // open.classList.add('unshow');
-   // c.classList.remove('button-div-open');
-}
+menuItems.forEach((el) => {
+    el.addEventListener("click", function () {
+        nav.classList.remove('unshow');
+        nav.classList.add('show');
+        c.classList.remove('button-div-open');
+    })
+});
+
+/*
+function closeMenu() {
+    nav.classList.remove('show');
+    nav.classList.add('unshow');
+    c.classList.remove('button-div-open');
+}*/
+
+
 
 function menuOpenButton() {
     if(c.classList.contains('button-div-open')) {
