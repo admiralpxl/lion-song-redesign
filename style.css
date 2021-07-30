@@ -19,6 +19,14 @@
     display: grid;
   }
 
+  .main-container-media {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .main-container-info {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -999,8 +1007,6 @@ body {
 .main-container-media {
   width: 100%;
   height: auto;
-  display: -ms-grid;
-  display: grid;
   background-color: #3B2A3C;
 }
 
